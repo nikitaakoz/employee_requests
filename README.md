@@ -18,6 +18,7 @@
 
 ## Структура проекта
 
+```
 employee_requests/
 ├── app/
 │   ├── api/
@@ -42,6 +43,7 @@ employee_requests/
 ├── seed_db.py
 ├── requirements.txt
 └── README.md
+```
 
 ## Запуск проекта
 
