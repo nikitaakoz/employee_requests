@@ -49,7 +49,7 @@ employee_requests/
 
 ### 1. Клонирование репозитория
 
-git clone https://github.com/your-username/employee_requests.git
+git clone https://github.com/Nikitaakoz/employee_requests.git
 cd employee_requests
 
 ### 2. Создание виртуального окружения
