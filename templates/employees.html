@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Справочник сотрудников</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        #employeesTable th:nth-child(1), 
+        #employeesTable td:nth-child(1) { width: 8%; }
+        #employeesTable th:nth-child(2), 
+        #employeesTable td:nth-child(2) { width: 42%; }
+        #employeesTable th:nth-child(3), 
+        #employeesTable td:nth-child(3) { width: 25%; }
+        #employeesTable th:nth-child(4), 
+        #employeesTable td:nth-child(4) { width: 25%; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="navbar-menu">
+            <li class="navbar-item">
+                <a href="/" class="navbar-link">Заявки</a>
+            </li>
+            <li class="navbar-item">
+                <a href="/employees-page" class="navbar-link active">Сотрудники</a>
+            </li>
+            <li class="navbar-item">
+                <a href="/reports-page" class="navbar-link">Отчёты</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Справочник сотрудников</h1>
+        
+        <div class="card">
+            <h2>Добавить сотрудника</h2>
+            <form id="employeeForm">
+                <div class="form-group">
+                    <label>ФИО:</label>
+                    <input type="text" id="full_name" required>
+                </div>
+                <div class="form-group">
+                    <label>Подразделение:</label>
+                    <select id="department" required>
+                        <option value="">-- Выберите подразделение --</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Должность:</label>
+                    <select id="position" required>
+                        <option value="">-- Выберите должность --</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Добавить</button>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2>Список сотрудников</h2>
+            <div class="table-wrapper">
+                <table id="employeesTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>ФИО</th>
+                            <th>Подразделение</th>
+                            <th>Должность</th>
+                        </tr>
+                    </thead>
+                    <tbody id="employeesBody">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/employees.js"></script>
+</body>
+</html>

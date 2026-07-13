@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отчёты - Система учёта заявок</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        .report-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 16px 0;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 16px;
+        }
+        
+        .report-item:last-child {
+            border-bottom: none;
+        }
+        
+        .report-label {
+            font-weight: 600;
+            color: #374151;
+            font-size: 16px;
+        }
+        
+        .report-value {
+            font-weight: 600;
+            color: #374151;  /* ИСПРАВЛЕНО: теперь серый вместо синего */
+            font-size: 16px;
+        }
+        
+        #statusReport, #overdueReport {
+            padding: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="navbar-menu">
+            <li class="navbar-item">
+                <a href="/" class="navbar-link">Заявки</a>
+            </li>
+            <li class="navbar-item">
+                <a href="/employees-page" class="navbar-link">Сотрудники</a>
+            </li>
+            <li class="navbar-item">
+                <a href="/reports-page" class="navbar-link active">Отчёты</a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <h1>Отчётность</h1>
+        
+        <div class="card">
+            <h2>Количество заявок по статусам</h2>
+            <div id="statusReport"></div>
+        </div>
+        
+        <div class="card">
+            <h2>Просроченные заявки</h2>
+            <div id="overdueReport"></div>
+        </div>
+        
+        <div class="card">
+            <h2>Выполненные заявки по исполнителям</h2>
+            <div class="table-wrapper">
+                <table id="assigneeReport">
+                    <thead>
+                        <tr>
+                            <th>Сотрудник</th>
+                            <th>Выполнено заявок</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/reports.js"></script>
+</body>
+</html>
