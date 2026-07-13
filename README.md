@@ -19,27 +19,27 @@
 ## Структура проекта
 
 employee_requests/
-── app/
+├── app/
 │   ├── api/
-│   │   ├── routes.py (API endpoints для заявок)
-│   │   └── employee_routes.py (API endpoints для сотрудников)
+│   │   ├── routes.py
+│   │   └── employee_routes.py
 │   ├── models/
-│   │   └── database.py (Модели SQLAlchemy, сессия БД)
+│   │   └── database.py
 │   ├── schemas/
-│   │   └── request.py (Pydantic-схемы)
+│   │   └── request.py
 │   ├── services/
-│   │   ── request_service.py (Бизнес-логика)
-│   └── main.py (Точка входа FastAPI)
+│   │   └── request_service.py
+│   └── main.py
 ├── static/
-│   ├── style.css (Стили)
-│   ├── app.js (Логика заявок)
-│   ├── employees.js (Логика сотрудников)
-│   └── reports.js (Логика отчётов)
+│   ├── style.css
+│   ├── app.js
+│   ├── employees.js
+│   └── reports.js
 ├── templates/
-│   ├── index.html (Страница заявок)
-│   ├── employees.html (Справочник сотрудников)
-│   └── reports.html (Отчётность)
-├── seed_db.py (Скрипт заполнения БД)
+│   ├── index.html
+│   ├── employees.html
+│   └── reports.html
+├── seed_db.py
 ├── requirements.txt
 └── README.md
 
